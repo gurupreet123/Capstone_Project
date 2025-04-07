@@ -1,0 +1,58 @@
+🔌 IoT-Based Smart Energy Meter with Theft Detection & Remote Monitoring
+This project is a smart energy meter system developed using IoT technologies such as ESP32, GSM modules, current/voltage sensors, and a mobile app interface (Blynk). It provides real-time energy consumption monitoring, remote load control, billing automation, and theft detection capabilities.
+
+📌 Features
+📲 Real-time Monitoring of voltage, current, and power using ESP32
+
+🧾 Automated Billing system based on live data
+
+🔐 Theft Detection logic to monitor tampering or unauthorized usage
+
+☁️ Cloud Storage of readings for historical analysis (via Firebase/Thingspeak)
+
+🔌 Remote Load Control through mobile app
+
+📉 Energy Usage Graphs and trend visualization
+
+📱 Blynk Integration for user-friendly mobile interface
+
+⚙️ Technologies Used
+Component	Description
+ESP32	Microcontroller for processing and communication
+ZMPT101B	Voltage sensor
+SCT-013	Current sensor
+Blynk App	Mobile app interface
+Firebase / Thingspeak	Cloud storage and data visualization
+GSM Module (SIM800L)	SMS alerts and communication (optional)
+Relay Module	For remote load switching
+🛠️ How It Works
+Sensors measure real-time voltage and current.
+
+ESP32 calculates power usage and pushes data to Firebase/Thingspeak.
+
+The Blynk app displays readings and allows control over connected appliances.
+
+Theft detection logic identifies anomalies and alerts the user.
+
+Monthly bills are generated automatically using consumption data.
+
+🧪 Setup Instructions
+Connect Components
+
+ESP32 + ZMPT101B + SCT-013 + Relay + GSM (optional)
+
+Upload Code
+
+Use Arduino IDE and upload smart_meter.ino to ESP32.
+
+Configure Firebase / Thingspeak
+
+Update credentials and API keys in the code.
+
+Set up Blynk
+
+Create a dashboard and link with your ESP32 auth token.
+
+Power the System
+
+Observe real-time data and use mobile app controls.
