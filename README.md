@@ -59,11 +59,6 @@ This project is a **smart energy meter system** developed using IoT technologies
 
 ---
 
-## 📷 **Demo**
-
-> _Add screenshots or GIFs showing the live dashboard and mobile controls here._
-
----
 
 ## 📚 **References**
 
@@ -82,6 +77,4 @@ This project is a **smart energy meter system** developed using IoT technologies
 - Rajput, S., & Singh, P. (2019). *A Review on Smart Metering Systems for Energy Monitoring and Management*  
 - Deshmukh, P., et al. (2020). *Smart Energy Meter Using IoT*  
 - **How2Electronics (2023).** *IoT Based Electricity Energy Meter Using ESP32 & Blynk.*  
-  🔗 [https://how2electronics.com/iot-based-electricity-energy-meter-using-esp32-blynk/](https://how2electronics.com/iot-based-electricity-energy-meter-using-esp32-blynk/)
-
 ---
