@@ -1,80 +1,74 @@
-# 🔌 **IoT-Based Smart Energy Meter with Theft Detection & Remote Monitoring**
+# IoT-Based Smart Energy Meter
 
-This project is a **smart energy meter system** developed using IoT technologies such as **ESP32, GSM modules, current/voltage sensors, and a mobile app interface (Blynk)**. It provides real-time energy consumption monitoring, remote load control, billing automation, and theft detection capabilities.
+An innovative IoT solution to monitor real-time electricity usage using ESP32 and ThingSpeak. This project helps users track voltage, current, power, and energy consumption (kWh) remotely from a web or mobile dashboard.
 
----
+## 🔍 Problem Statement
+Traditional energy meters do not provide real-time usage data. Manual readings can lead to billing errors, and users lack tools to monitor and control their energy consumption efficiently. There's a need for a low-cost, remote-accessible energy tracking system.
 
-## 📌 **Features**
+## 🎯 Objective
+- Build a cost-effective energy meter using ESP32 and sensors.
+- Calculate voltage, current, power, and energy in real-time.
+- Upload data to the cloud (ThingSpeak) for visualization.
+- Make energy data accessible anytime via mobile or web.
+- Promote energy-saving habits through user awareness.
 
-- 📲 **Real-time Monitoring** of voltage, current, and power using ESP32  
-- 🧾 **Automated Billing** system based on live data  
-- 🔐 **Theft Detection** logic to monitor tampering or unauthorized usage  
-- ☁️ **Cloud Storage** of readings for historical analysis (via Firebase/Thingspeak)  
-- 🔌 **Remote Load Control** through mobile app  
-- 📉 **Energy Usage Graphs** and trend visualization  
-- 📱 **Blynk Integration** for user-friendly mobile interface  
+## 🛠️ Components Used
+- ESP32 Wi-Fi Development Board  
+- Voltage Sensor Module (AC transformer-based)  
+- Current Sensor (CT Clamp)  
+- LCD Display (Optional)  
+- ThingSpeak Platform  
+- Jumper Wires, Breadboard, Power Supply  
 
----
+## 🧠 Working Principle
+- Sensors measure AC voltage and current.
+- ESP32 reads these signals and uses EmonLib to calculate:
+  - Vrms (Voltage)
+  - Irms (Current)
+  - Apparent Power
+  - Energy (kWh)
+- Data is sent to ThingSpeak over Wi-Fi.
+- Values are updated periodically and visualized in graphs.
 
-## ⚙️ **Technologies Used**
+## 🔄 Flowchart
 
-| **Component** | **Description** |
-|--------------|-----------------|
-| **ESP32**     | Microcontroller for processing and communication |
-| **ZMPT101B**  | Voltage sensor |
-| **SCT-013**   | Current sensor |
-| **Blynk App** | Mobile app interface |
-| **Firebase / Thingspeak** | Cloud storage and data visualization |
-| **GSM Module (SIM800L)** | SMS alerts and communication (optional) |
-| **Relay Module** | For remote load switching |
+1. Initialize system
+2. Connect ESP32 to Wi-Fi
+3. Read voltage and current
+4. Compute power and energy
+5. Upload data to ThingSpeak
+6. Repeat after time interval
 
----
+## 🌐 Cloud Interface - ThingSpeak
+- Real-time graphs for Voltage, Current, Power, and Energy
+- Accessible via web or mobile
+- Historical data visualization and analytics
+- Exportable datasets for further analysis
 
-## 🛠️ **How It Works**
+## 🌟 Features
+- Real-time monitoring of electrical parameters
+- Tracks total energy consumption (kWh)
+- Live dashboard accessible from anywhere
+- Open-source, affordable, and DIY-friendly
+- Expandable with smart features
 
-1. Sensors measure real-time voltage and current.  
-2. ESP32 calculates power usage and pushes data to Firebase/Thingspeak.  
-3. The Blynk app displays readings and allows control over connected appliances.  
-4. Theft detection logic identifies anomalies and alerts the user.  
-5. Monthly bills are generated automatically using consumption data.  
+## 💡 Applications
+- Home energy tracking
+- Small offices and shops
+- Educational/engineering projects
+- Appliance-level usage analysis
+- Smart grid/home automation integration
 
----
+## 🚀 Future Scope
+- Develop a mobile app for users to view individual energy meter readings.
+- Add alarms, usage alerts, and energy recommendations.
+- Voice assistant integration (Alexa/Siri) for quick queries.
+- Energy cost estimation based on local tariffs.
+- Smart control and load prediction using analytics.
+## 📸 Hardware Setup
+![image](https://github.com/user-attachments/assets/6906d562-403a-4293-9ca6-31e1f7ffdcbb)
 
-## 🧪 **Setup Instructions**
+## 📸 Sample Output
+![image](https://github.com/user-attachments/assets/29da608d-006a-4f6b-bda3-0b8e961e2afd)
+![image](https://github.com/user-attachments/assets/d4dd4e82-af5c-4b73-b340-c8a774f26a9f)
 
-1. **Connect Components**
-   - ESP32 + ZMPT101B + SCT-013 + Relay + GSM (optional)
-
-2. **Upload Code**
-   - Use Arduino IDE and upload `smart_meter.ino` to ESP32.
-
-3. **Configure Firebase / Thingspeak**
-   - Update credentials and API keys in the code.
-
-4. **Set up Blynk**
-   - Create a dashboard and link with your ESP32 auth token.
-
-5. **Power the System**
-   - Observe real-time data and use mobile app controls.
-
----
-
-
-## 📚 **References**
-
-- Patel, R., & Bhatt, D. (2018). *IoT Based Smart Energy Meter with Theft Detection Capability*  
-- Agarwal, S., et al. (2019). *Smart Metering System Using GSM and Arduino for Energy Consumption Monitoring*  
-- Hossain, M. M., et al. (2020). *IoT Enabled Smart Energy Meter with Remote Load Control and Monitoring*  
-- Verma, N., & Agrawal, V. (2017). *Wireless Energy Meter Using IoT*  
-- Sutar, R. S., et al. (2020). *An IoT Based Smart Energy Meter with Billing System*  
-- Mulla, I., & Patil, D. (2018). *Smart Energy Meter using IoT for Advanced Metering Infrastructure*  
-- Kumar, V., et al. (2019). *Design and Development of IoT Based Energy Monitoring System*  
-- Nayak, D., & Sahoo, A. (2020). *Real Time Monitoring of Electricity Using IoT*  
-- Kamble, A., & Kadam, D. (2021). *Smart Power Monitoring and Control System using IoT and Android Application*  
-- Amin, R., et al. (2019). *Energy Meter Reading System Using IoT*  
-- Rani, A., et al. (2020). *IoT Based Energy Meter Monitoring and Load Control*  
-- Jadhav, P., & Kale, S. (2018). *IoT Based Energy Monitoring and Management System*  
-- Rajput, S., & Singh, P. (2019). *A Review on Smart Metering Systems for Energy Monitoring and Management*  
-- Deshmukh, P., et al. (2020). *Smart Energy Meter Using IoT*  
-- **How2Electronics (2023).** *IoT Based Electricity Energy Meter Using ESP32 & Blynk.*  
----
